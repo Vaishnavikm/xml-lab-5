@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inv:schema xmlns:inv="http://www.w3.org/2001/XMLSchema">
+    <inv:element name="inventory" type="inventory"></inv:element>
+    <inv:complexType name="inventory">
+        <inv:sequence>
+            <inv:element name="Products" type="Products" minOccurs="1" maxOccurs="unbounded"></inv:element>
+            <inv:element name="Stocks" type="Stocks" minOccurs="1" maxOccurs="unbounded"></inv:element>
+            <inv:element name="Orders" type="Orders" minOccurs="1" maxOccurs="unbounded"></inv:element>
+        </inv:sequence>
+    </inv:complexType>
+    <inv:complexType name="Products">
+        <inv:sequence>
+            <inv:element name="Products_id" type="pid"></inv:element>
+            <inv:element name="Name" type="inv:string"></inv:element>
+            <inv:element name="Quantity" type="inv:integer"></inv:element>
+            <inv:element name="price" type="inv:string"></inv:element>
+            <inv:element name="mft_date" type="inv:date"></inv:element>
+        </inv:sequence>
+    </inv:complexType>
+    <inv:complexType name="Stocks">
+        <inv:sequence>
+            <inv:element name="stock_id" type="pid"></inv:element>
+            <inv:element name="Name" type="inv:string"></inv:element>
+            <inv:element name="Quantity" type="inv:integer"></inv:element>
+            <inv:element name="location" type="inv:string"></inv:element>
+            <inv:element name="Phone_No" type="phone"></inv:element>
+        </inv:sequence>
+    </inv:complexType>
+    <inv:complexType name="Orders">
+        <inv:sequence>
+            <inv:element name="order_id" type="tid"></inv:element>
+            <inv:element name="Name" type="inv:string"></inv:element>
+            <inv:element name="Orderdet" type="inv:integer"></inv:element>
+            <inv:element name="Email" type="inv:string"></inv:element>
+            <inv:element name="Phone_No" type="phone"></inv:element>
+        </inv:sequence>
+    </inv:complexType>
+    <inv:simpleType name="phone">
+        <inv:restriction base="inv:integer">
+            <inv:minInclusive value="10"></inv:minInclusive>
+            <inv:pattern value="[0-9]*"></inv:pattern>
+        </inv:restriction>
+    </inv:simpleType>
+    <inv:simpleType name="mid">
+        <inv:restriction base="inv:string">
+            <inv:maxLength value="5"></inv:maxLength>
+            <inv:pattern value="M[0-9]"></inv:pattern>
+        </inv:restriction>
+    </inv:simpleType>
+    <inv:simpleType name="pid">
+        <inv:restriction base="inv:string">
+            <inv:maxLength value="5"></inv:maxLength>
+            <inv:pattern value="P[0-9]"></inv:pattern>
+        </inv:restriction>
+    </inv:simpleType>
+    <inv:simpleType name="tid">
+        <inv:restriction base="inv:string">
+            <inv:maxLength value="5"></inv:maxLength>
+            <inv:pattern value="T[0-9]"></inv:pattern>
+        </inv:restriction>
+    </inv:simpleType>
+</inv:schema>
