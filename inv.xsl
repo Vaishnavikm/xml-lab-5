@@ -3,40 +3,40 @@
     <xsl:template match="/">
         <html>
             <body>
-                <h1 style="text-align:center">Admin Dashboard</h1>
-                <h2>Managers:</h2>
+                <h1 style="text-align:center">Inventory details</h1>
+                <h2>Products:</h2>
                 <table>
                     <tr>
-                        <th style="text-align:left">Manager_ID</th>
+                        <th style="text-align:left">Product_ID</th>
                         <th style="text-align:left">Name</th>
-                        <th style="text-align:left">Age</th>
-                        <th style="text-align:left">Email</th>
-                        <th style="text-align:left">Phone_No.</th>
+                        <th style="text-align:left">Quantity</th>
+                        <th style="text-align:left">Price</th>
+                        <th style="text-align:left">mft_date</th>
                     </tr>
-                    <xsl:for-each select="user/Manager">
-                        <xsl:sort select="manager_id" />
-                        <xsl:if test="Age > 31">
+                    <xsl:for-each select="inventory/Products">
+                        <xsl:sort select="product_id" />
+                        <xsl:if test="price > 500">
                             <tr>
                                 <td>
-                                    <xsl:value-of select="manager_id" />
+                                    <xsl:value-of select="product_id" />
                                 </td>
                                 <td>
                                     <xsl:value-of select="Name" />
                                 </td>
                                 <td>
-                                    <xsl:value-of select="Age" />
+                                    <xsl:value-of select="Quantity" />
                                 </td>
                                 <td>
-                                    <xsl:value-of select="Email" />
+                                    <xsl:value-of select="Price" />
                                 </td>
                                 <td>
-                                    <xsl:value-of select="Phone_No" />
+                                    <xsl:value-of select="mft_date" />
                                 </td>
                             </tr>
                         </xsl:if>
                     </xsl:for-each>
                 </table>
-                <h2>Players:</h2>
+                <h2>Stocks:</h2>
                 <table>
                     <tr>
                         <th style="text-align:left">Player_ID</th>

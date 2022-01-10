@@ -1,61 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="inv.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
-<?xml-stylesheet href="tms.xsl" type="text/xsl"?>
+<?xml-stylesheet href="inv.xsl" type="text/xsl"?>
 <inventory>
     <Products>
-        <product_id>M1</product_id>
-        <Name>Suresh Ram</Name>
-        <Age>34</Age>
-        <Email>sureshram123@gmail.com</Email>
-        <Phone_No>8735116352</Phone_No>
-    </Manager>
-    <Manager>
-        <manager_id>M2</manager_id>
-        <Name>Lila Singh</Name>
-        <Age>31</Age>
-        <Email>lilasingh@gmail.com</Email>
-        <Phone_No>8472392839</Phone_No>
-    </Manager>
-    <Manager>
-        <manager_id>M3</manager_id>
-        <Name>Adil</Name>
-        <Age>36</Age>
-        <Email>adil1887@gmail.com</Email>
-        <Phone_No>7938392028</Phone_No>
-    </Manager>
-    <Player>
-        <player_id>P1</player_id>
-        <Name>Ram Suresh</Name>
-        <Age>19</Age>
-        <Email>sureshram13@gmail.com</Email>
-        <Phone_No>8738416352</Phone_No>
-    </Player>
-    <Player>
-        <player_id>P2</player_id>
-        <Name>Rohan</Name>
-        <Age>17</Age>
-        <Email>rohankr@gmail.com</Email>
-        <Phone_No>8368389832</Phone_No>
-    </Player>
-    <Player>
-        <player_id>P3</player_id>
-        <Name>Jose</Name>
-        <Age>21</Age>
-        <Email>joseanthony@gmail.com</Email>
-        <Phone_No>8127389384</Phone_No>
-    </Player>
-    <Trainer>
-        <trainer_id>T1</trainer_id>
-        <Name>Ramesh</Name>
-        <Age>33</Age>
-        <Email>ramesh@gmail.com</Email>
-        <Phone_No>8738416942</Phone_No>
-    </Trainer>
-    <Trainer>
-        <trainer_id>T2</trainer_id>
-        <Name>Steve</Name>
-        <Age>31</Age>
-        <Email>steveie42@gmail.com</Email>
-        <Phone_No>8748932916</Phone_No>
-    </Trainer>
-</user>
+        <product_id>P1</product_id>
+        <Name>Coffee Beans</Name>
+        <Quantity>25 kg</Quantity>
+        <price>1500</price>
+        <mft_date>2021-12-22</mft_date>
+    </Products>
+    <Products>
+        <product_id>P1</product_id>
+        <Name>Coffee Beans</Name>
+        <Quantity>25 kg</Quantity>
+        <price>1500</price>
+        <mft_date>2021-12-22</mft_date>
+    </Products>
+    <Products>
+        <product_id>P1</product_id>
+        <Name>Coffee Beans</Name>
+        <Quantity>25 kg</Quantity>
+        <price>1500</price>
+        <mft_date>2021-12-22</mft_date>
+    </Products>
+    <Stocks>
+        <stock_id>S1</stock_id>
+        <Name>Coffee Beans</Name>
+        <Quantity>10 kg</Quantity>
+        <location>JP nagar Warehouse</location>
+        <Stock_type>old</Stock_type>
+    </Stocks>
+    <Stocks>
+        <stock_id>S1</stock_id>
+        <Name>Coffee Beans</Name>
+        <Quantity>10 kg</Quantity>
+        <location>JP nagar Warehouse</location>
+        <Stock_type>old</Stock_type>
+    </Stocks>
+    <Stocks>
+        <stock_id>S1</stock_id>
+        <Name>Coffee Beans</Name>
+        <Quantity>10 kg</Quantity>
+        <location>JP nagar Warehouse</location>
+        <Stock_type>old</Stock_type>
+    </Stocks>
+   <Orders>
+        <order_id>O1</order_id>
+        <Branch_det>Barista CHC</Branch_det>
+        <O_date>2021-12-22</O_date>
+        <product>Coffee Beans</product>
+        <Price>2500</Price>
+    </Orders>
+    <Orders>
+        <order_id>O1</order_id>
+        <Branch_det>Barista CHC</Branch_det>
+        <O_date>2021-12-22</O_date>
+        <product>Coffee Beans</product>
+        <Price>2500</Price>
+    </Orders>
+    <Orders>
+        <order_id>O1</order_id>
+        <Branch_det>Barista CHC</Branch_det>
+        <O_date>2021-12-22</O_date>
+        <product>Coffee Beans</product>
+        <Price>2500</Price>
+    </Orders>
+</inventory>

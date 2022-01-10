@@ -10,41 +10,35 @@
     </inv:complexType>
     <inv:complexType name="Products">
         <inv:sequence>
-            <inv:element name="Products_id" type="pid"></inv:element>
+            <inv:element name="product_id" type="pid"></inv:element>
             <inv:element name="Name" type="inv:string"></inv:element>
-            <inv:element name="Quantity" type="inv:integer"></inv:element>
-            <inv:element name="price" type="inv:string"></inv:element>
+            <inv:element name="Quantity" type="inv:string"></inv:element>
+            <inv:element name="price" type="inv:int"></inv:element>
             <inv:element name="mft_date" type="inv:date"></inv:element>
         </inv:sequence>
     </inv:complexType>
     <inv:complexType name="Stocks">
         <inv:sequence>
-            <inv:element name="stock_id" type="pid"></inv:element>
+            <inv:element name="stock_id" type="sid"></inv:element>
             <inv:element name="Name" type="inv:string"></inv:element>
-            <inv:element name="Quantity" type="inv:integer"></inv:element>
+            <inv:element name="Quantity" type="inv:string"></inv:element>
             <inv:element name="location" type="inv:string"></inv:element>
-            <inv:element name="Phone_No" type="phone"></inv:element>
+            <inv:element name="Stock_type" type="S_type"></inv:element>
         </inv:sequence>
     </inv:complexType>
     <inv:complexType name="Orders">
         <inv:sequence>
-            <inv:element name="order_id" type="tid"></inv:element>
-            <inv:element name="Name" type="inv:string"></inv:element>
-            <inv:element name="Orderdet" type="inv:integer"></inv:element>
-            <inv:element name="Email" type="inv:string"></inv:element>
-            <inv:element name="Phone_No" type="phone"></inv:element>
+            <inv:element name="order_id" type="oid"></inv:element>
+            <inv:element name="Branch_det" type="inv:string"></inv:element>
+            <inv:element name="O_date" type="inv:date"></inv:element>
+            <inv:element name="product" type="inv:string"></inv:element>
+            <inv:element name="Price" type="inv:int"></inv:element>
         </inv:sequence>
     </inv:complexType>
-    <inv:simpleType name="phone">
-        <inv:restriction base="inv:integer">
-            <inv:minInclusive value="10"></inv:minInclusive>
-            <inv:pattern value="[0-9]*"></inv:pattern>
-        </inv:restriction>
-    </inv:simpleType>
-    <inv:simpleType name="mid">
+    <inv:simpleType name="S_type">
         <inv:restriction base="inv:string">
-            <inv:maxLength value="5"></inv:maxLength>
-            <inv:pattern value="M[0-9]"></inv:pattern>
+            <inv:maxLength value="10"></inv:maxLength>
+            <inv:pattern value="[old/new]*"></inv:pattern>
         </inv:restriction>
     </inv:simpleType>
     <inv:simpleType name="pid">
@@ -53,10 +47,16 @@
             <inv:pattern value="P[0-9]"></inv:pattern>
         </inv:restriction>
     </inv:simpleType>
-    <inv:simpleType name="tid">
+    <inv:simpleType name="sid">
         <inv:restriction base="inv:string">
             <inv:maxLength value="5"></inv:maxLength>
-            <inv:pattern value="T[0-9]"></inv:pattern>
+            <inv:pattern value="S[0-9]"></inv:pattern>
+        </inv:restriction>
+    </inv:simpleType>
+    <inv:simpleType name="oid">
+        <inv:restriction base="inv:string">
+            <inv:maxLength value="5"></inv:maxLength>
+            <inv:pattern value="O[0-9]"></inv:pattern>
         </inv:restriction>
     </inv:simpleType>
 </inv:schema>
