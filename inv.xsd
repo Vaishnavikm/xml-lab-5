@@ -21,7 +21,7 @@
         <inv:sequence>
             <inv:element name="stock_id" type="sid"></inv:element>
             <inv:element name="Name" type="inv:string"></inv:element>
-            <inv:element name="Quantity" type="inv:string"></inv:element>
+            <inv:element name="Quantity" type="inv:int"></inv:element>
             <inv:element name="location" type="inv:string"></inv:element>
             <inv:element name="Stock_type" type="S_type"></inv:element>
         </inv:sequence>

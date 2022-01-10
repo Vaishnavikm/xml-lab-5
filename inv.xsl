@@ -5,7 +5,7 @@
             <body>
                 <h1 style="text-align:center">Inventory details</h1>
                 <h2>Products:</h2>
-                <table>
+                <table border = "1">
                     <tr>
                         <th style="text-align:left">Product_ID</th>
                         <th style="text-align:left">Name</th>
@@ -37,35 +37,35 @@
                     </xsl:for-each>
                 </table>
                 <h2>Stocks:</h2>
-                <table>
+                <table border = "1">
                     <tr>
-                        <th style="text-align:left">Player_ID</th>
+                        <th style="text-align:left">Stock_ID</th>
                         <th style="text-align:left">Name</th>
-                        <th style="text-align:left">Age</th>
-                        <th style="text-align:left">Email</th>
-                        <th style="text-align:left">Phone_No.</th>
+                        <th style="text-align:left">Quantity</th>
+                        <th style="text-align:left">location</th>
+                        <th style="text-align:left">Stock_type</th>
                     </tr>
-                    <xsl:for-each select="user/Player">
-                        <xsl:sort select="Age" />
+                    <xsl:for-each select="inventory/Stocks">
+                        <xsl:sort select="Quantity" />
                         <xsl:choose>
-                            <xsl:when test="Age > 17">
-                                <tr bgcolor="#ff00ff">
+                            <xsl:when test="Quantity > 10">
+                                <tr>
 
                                     <td>
-                                        <xsl:value-of select="player_id" />
+                                        <xsl:value-of select="stock_id" />
                                     </td>
 
                                     <td>
                                         <xsl:value-of select="Name" />
                                     </td>
                                     <td>
-                                        <xsl:value-of select="Age" />
+                                        <xsl:value-of select="Quantity" />
                                     </td>
                                     <td>
-                                        <xsl:value-of select="Email" />
+                                        <xsl:value-of select="location" />
                                     </td>
                                     <td>
-                                        <xsl:value-of select="Phone_No" />
+                                        <xsl:value-of select="Stock_type" />
                                     </td>
                                 </tr>
                             </xsl:when>
@@ -73,51 +73,51 @@
                                 <tr>
 
                                     <td>
-                                        <xsl:value-of select="player_id" />
+                                        <xsl:value-of select="stock_id" />
                                     </td>
 
                                     <td>
                                         <xsl:value-of select="Name" />
                                     </td>
                                     <td>
-                                        <xsl:value-of select="Age" />
+                                        <xsl:value-of select="Quantity" />
                                     </td>
                                     <td>
-                                        <xsl:value-of select="Email" />
+                                        <xsl:value-of select="location" />
                                     </td>
                                     <td>
-                                        <xsl:value-of select="Phone_No" />
+                                        <xsl:value-of select="Stock_type" />
                                     </td>
                                 </tr>
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:for-each>
                 </table>
-                <h2>Trainers:</h2>
-                <table>
+                <h2>Orders:</h2>
+                <table border = "1">
                     <tr>
-                        <th style="text-align:left">Trainer_ID</th>
-                        <th style="text-align:left">Name</th>
-                        <th style="text-align:left">Age</th>
-                        <th style="text-align:left">Email</th>
-                        <th style="text-align:left">Phone_No.</th>
+                        <th style="text-align:left">order_id</th>
+                        <th style="text-align:left">Branch_details</th>
+                        <th style="text-align:left">O_date</th>
+                        <th style="text-align:left">Product</th>
+                        <th style="text-align:left">Price</th>
                     </tr>
-                    <xsl:for-each select="user/Trainer">
+                    <xsl:for-each select="inventory/orders">
                         <tr>
                             <td>
-                                <xsl:value-of select="trainer_id" />
+                                <xsl:value-of select="stock_id" />
                             </td>
                             <td>
-                                <xsl:value-of select="Name" />
+                                <xsl:value-of select="Branch_det" />
                             </td>
                             <td>
-                                <xsl:value-of select="Age" />
+                                <xsl:value-of select="O_date" />
                             </td>
                             <td>
-                                <xsl:value-of select="Email" />
+                                <xsl:value-of select="Product" />
                             </td>
                             <td>
-                                <xsl:value-of select="Phone_No" />
+                                <xsl:value-of select="Price" />
                             </td>
                         </tr>
                     </xsl:for-each>

@@ -26,21 +26,21 @@
     <Stocks>
         <stock_id>S1</stock_id>
         <Name>Coffee Beans</Name>
-        <Quantity>10 kg</Quantity>
+        <Quantity>10</Quantity>
         <location>JP nagar Warehouse</location>
         <Stock_type>old</Stock_type>
     </Stocks>
     <Stocks>
         <stock_id>S1</stock_id>
         <Name>Coffee Beans</Name>
-        <Quantity>10 kg</Quantity>
+        <Quantity>10</Quantity>
         <location>JP nagar Warehouse</location>
         <Stock_type>old</Stock_type>
     </Stocks>
     <Stocks>
         <stock_id>S1</stock_id>
         <Name>Coffee Beans</Name>
-        <Quantity>10 kg</Quantity>
+        <Quantity>10</Quantity>
         <location>JP nagar Warehouse</location>
         <Stock_type>old</Stock_type>
     </Stocks>
