@@ -52,14 +52,14 @@
         <Price>2500</Price>
     </Orders>
     <Orders>
-        <order_id>O1</order_id>
+        <order_id>O2</order_id>
         <Branch_det>Barista CHC</Branch_det>
         <O_date>2021-12-22</O_date>
         <product>Coffee Beans</product>
         <Price>2500</Price>
     </Orders>
     <Orders>
-        <order_id>O1</order_id>
+        <order_id>O3</order_id>
         <Branch_det>Barista CHC</Branch_det>
         <O_date>2021-12-22</O_date>
         <product>Coffee Beans</product>

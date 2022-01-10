@@ -3,7 +3,7 @@
     <xsl:template match="/">
         <html>
             <body>
-                <h1 style="text-align:center">Inventory details</h1>
+                <h1 style="text-align:left">Inventory details</h1>
                 <h2>Products:</h2>
                 <table border = "1">
                     <tr>
@@ -27,7 +27,7 @@
                                     <xsl:value-of select="Quantity" />
                                 </td>
                                 <td>
-                                    <xsl:value-of select="Price" />
+                                    <xsl:value-of select="price" />
                                 </td>
                                 <td>
                                     <xsl:value-of select="mft_date" />
@@ -94,7 +94,7 @@
                     </xsl:for-each>
                 </table>
                 <h2>Orders:</h2>
-                <table border = "1">
+                <table border = "1" >
                     <tr>
                         <th style="text-align:left">order_id</th>
                         <th style="text-align:left">Branch_details</th>
@@ -102,10 +102,10 @@
                         <th style="text-align:left">Product</th>
                         <th style="text-align:left">Price</th>
                     </tr>
-                    <xsl:for-each select="inventory/orders">
+                    <xsl:for-each select="inventory/Orders">
                         <tr>
                             <td>
-                                <xsl:value-of select="stock_id" />
+                                <xsl:value-of select="order_id" />
                             </td>
                             <td>
                                 <xsl:value-of select="Branch_det" />
@@ -114,7 +114,7 @@
                                 <xsl:value-of select="O_date" />
                             </td>
                             <td>
-                                <xsl:value-of select="Product" />
+                                <xsl:value-of select="product" />
                             </td>
                             <td>
                                 <xsl:value-of select="Price" />
